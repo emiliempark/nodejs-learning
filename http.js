@@ -1,9 +1,12 @@
 var http = require('http');
-var fs = equire('fs'); //file system
+var fs = require('fs'); //file system
 
 var server = http.createServer(function(req, res){
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end('<h1>Hello world</h1>');
+	fs.readFile('example.html', function(error, data){
+	    res.writeHead(200, {'Content-Type': 'text/html'});
+	    res.end(data);
+
+	});
 });
 
 server.listen(9000, function(){
