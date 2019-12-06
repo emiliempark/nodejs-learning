@@ -3,11 +3,11 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-app.use(express.static(__dirname +'/public'));
+app.use(express.static(__dirname +'/'));
 
 // on the request to root (localhost:3000/)
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 // On localhost:3000/welcome

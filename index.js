@@ -1,3 +1,1 @@
-var test = require ('./test');
-
-test.hello(5);
+console.log('index.js loaded');
